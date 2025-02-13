@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.8/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"HTML 基礎：Chap_02 重點整理","children":[{"content":"HTML 基本結構","children":[{"content":"<strong>HTML 文件的基本組成</strong>：","children":[{"content":"<strong><code>&lt;!DOCTYPE html&gt;</code></strong>: 宣告文件類型為 HTML5。","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<strong><code>&lt;html&gt;</code></strong>: HTML 文件的根元素，所有 HTML 內容都必須包含在此元素中。","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"<strong><code>&lt;head&gt;</code></strong>: 包含 HTML 文件的元數據 (metadata)，例如網頁標題、樣式表連結等。","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"<strong><code>&lt;body&gt;</code></strong>: 包含 HTML 文件的實際內容，也就是網頁上顯示的內容。","children":[],"payload":{"tag":"li","lines":"12,13"}}],"payload":{"tag":"li","lines":"8,13"}},{"content":"<strong>HTML 元素的架構</strong>：","children":[{"content":"<strong>起始標籤 (opening tag)</strong>：例如 <code>&lt;p&gt;</code>，表示元素的開始。","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"<strong>結束標籤 (closing tag)</strong>：例如 <code>&lt;/p&gt;</code>，表示元素的結束。","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"<strong>內容 (content)</strong>：起始標籤和結束標籤之間的內容。","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<strong>屬性 (attributes)</strong>：提供元素的額外資訊，例如 <code>&lt;a href=\"https://www.example.com\"&gt;</code> 中的 <code>href</code> 屬性。","children":[],"payload":{"tag":"li","lines":"17,18"}}],"payload":{"tag":"li","lines":"13,18"}},{"content":"<strong>HTML 元素範例</strong>：","children":[{"content":"<strong>段落元素 (<code>&lt;p&gt;</code>)</strong>: 用於顯示段落文字。","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"<strong>標題元素 (<code>&lt;h1&gt;</code> 到 <code>&lt;h6&gt;</code>)</strong>: 用於顯示不同級別的標題。","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"<strong>連結元素 (<code>&lt;a&gt;</code>)</strong>: 用於創建超連結。","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"<strong>粗體元素 (<code>&lt;b&gt;</code>)</strong>: 用於顯示粗體文字。","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"<strong>斜體元素 (<code>&lt;i&gt;</code>)</strong>: 用於顯示斜體文字。","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"<strong>底線元素 (<code>&lt;u&gt;</code>)</strong>: 用於顯示有底線的文字。","children":[],"payload":{"tag":"li","lines":"24,26"}}],"payload":{"tag":"li","lines":"18,26"}}],"payload":{"tag":"h2","lines":"6,7"}},{"content":"HTML 元素的嵌套 (Nesting)","children":[{"content":"<strong>元素的嵌套概念</strong>：","children":[{"content":"HTML 元素可以互相嵌套，也就是 <strong>一個元素可以包含在另一個元素之內</strong>。","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"<strong>嵌套的元素稱為子元素 (child element)</strong>，包含子元素的元素稱為 <strong>父元素 (parent element)</strong>。","children":[],"payload":{"tag":"li","lines":"30,31"}}],"payload":{"tag":"li","lines":"28,31"}},{"content":"<strong>嵌套的範例</strong>：","children":[{"content":"在段落元素 <code>&lt;p&gt;</code> 中嵌套粗體元素 <code>&lt;b&gt;</code>，例如 <code>&lt;p&gt;&lt;b&gt;這是粗體文字&lt;/b&gt;，這是普通文字。&lt;/p&gt;</code>。","children":[],"payload":{"tag":"li","lines":"32,33"}},{"content":"在段落元素 <code>&lt;p&gt;</code> 中嵌套斜體元素 <code>&lt;i&gt;</code>，例如 <code>&lt;p&gt;&lt;i&gt;這是斜體文字&lt;/i&gt;，這是普通文字。&lt;/p&gt;</code>。","children":[],"payload":{"tag":"li","lines":"33,34"}},{"content":"在段落元素 <code>&lt;p&gt;</code> 中嵌套底線元素 <code>&lt;u&gt;</code>，例如 <code>&lt;p&gt;&lt;u&gt;這是底線文字&lt;/u&gt;，這是普通文字。&lt;/p&gt;</code>。","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"在段落元素 <code>&lt;p&gt;</code> 中同時嵌套粗體元素 <code>&lt;b&gt;</code>，斜體元素 <code>&lt;i&gt;</code> 和底線元素 <code>&lt;u&gt;</code>，例如 <code>&lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;這是粗體斜體底線文字&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;，這是普通文字。&lt;/p&gt;</code>。","children":[],"payload":{"tag":"li","lines":"35,36"}}],"payload":{"tag":"li","lines":"31,36"}},{"content":"<strong>嵌套的重要性</strong>：","children":[{"content":"<strong>正確的嵌套可以確保 HTML 結構清晰</strong>，並 <strong>方便瀏覽器解析和渲染網頁</strong>。","children":[],"payload":{"tag":"li","lines":"37,39"}}],"payload":{"tag":"li","lines":"36,39"}}],"payload":{"tag":"h2","lines":"26,27"}},{"content":"HTML 屬性 (Attributes)","children":[{"content":"<strong>屬性的用途</strong>：","children":[{"content":"<strong>HTML 屬性提供元素的額外資訊</strong>，例如：","children":[{"content":"<strong>連結的目標網址</strong>：<code>&lt;a href=\"https://www.example.com\"&gt;</code>。","children":[],"payload":{"tag":"li","lines":"43,44"}},{"content":"<strong>圖片的來源網址</strong>：<code>&lt;img src=\"image.jpg\"&gt;</code>。","children":[],"payload":{"tag":"li","lines":"44,45"}}],"payload":{"tag":"li","lines":"42,45"}}],"payload":{"tag":"li","lines":"41,45"}},{"content":"<strong>屬性的基本結構</strong>：","children":[{"content":"<strong>屬性名稱 (attribute name)</strong>：例如 <code>href</code>、<code>src</code>。","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"<strong>等號 (=)</strong>：用於將屬性名稱和屬性值分開。","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"<strong>屬性值 (attribute value)</strong>：例如 <code>\"https://www.example.com\"</code>、<code>\"image.jpg\"</code>。","children":[],"payload":{"tag":"li","lines":"48,49"}}],"payload":{"tag":"li","lines":"45,49"}},{"content":"<strong>常見屬性</strong>：","children":[{"content":"<code>href</code>：用於連結元素 (<code>&lt;a&gt;</code>)，指定連結的目標網址。","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"<code>src</code>：用於圖片元素 (<code>&lt;img&gt;</code>)，指定圖片的來源網址。","children":[],"payload":{"tag":"li","lines":"51,52"}},{"content":"<code>class</code>：用於指定元素的 CSS 類別 (class)。","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"<code>id</code>：用於指定元素的唯一 ID。","children":[],"payload":{"tag":"li","lines":"53,55"}}],"payload":{"tag":"li","lines":"49,55"}}],"payload":{"tag":"h2","lines":"39,40"}},{"content":"HTML 空白字符 (White Space)","children":[{"content":"<strong>HTML 對於空白字符的處理</strong>：","children":[{"content":"<strong>HTML 會忽略多餘的空白字符 (空格、換行、Tab 鍵等)</strong>。","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"<strong>無論您在程式碼中輸入多少空白字符，瀏覽器都會將其視為單個空格</strong>。","children":[],"payload":{"tag":"li","lines":"59,60"}},{"content":"<strong>這表示您可以自由地使用空白字符來排版程式碼，增加程式碼的可讀性</strong>。","children":[],"payload":{"tag":"li","lines":"60,62"}}],"payload":{"tag":"li","lines":"57,62"}}],"payload":{"tag":"h2","lines":"55,56"}}],"payload":{"tag":"h1","lines":"2,3"}},{})</script>
+</body>
+</html>
